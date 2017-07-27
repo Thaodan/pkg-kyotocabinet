@@ -10,7 +10,7 @@ Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-%{version}.tar.gz
 Patch0:     rm_native_optimization.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
-BuildRequires: gcc-c++
+BuildRequires: gcc-c++ zlib
 
 %description
 Kyoto Cabinet is a library of routines for managing a
@@ -40,7 +40,7 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 %prep
-%setup -n kyotocabinet-%{version}
+%setup -q -n kyotocabinet-%{version}
 %patch0 -p1
 
 %build
