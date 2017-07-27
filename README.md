@@ -11,7 +11,7 @@ RPM packaging of Kyoto Cabinet for Sailfish
 
 * build by running 
 ```
-export SFARCH=armv7hl; mb2 -t SailfishOS-$SFARCH -s ../rpm/kyotocabinet.spec build
+export SFARCH=armv7hl; mb2 -t SailfishOS-$SFARCH -s ../kyotocabinet.spec build
 ```
 in MER SDK.
 
