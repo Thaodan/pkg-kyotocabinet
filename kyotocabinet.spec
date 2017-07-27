@@ -6,7 +6,7 @@ License: LGPL and BSD 2-clause license
 Group: Libraries/Databases
 URL: http://fallabs.com/kyotocabinet
 
-Source: %{name}-%{version}.tar.gz
+Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: gcc-c++
@@ -41,7 +41,7 @@ database. Test tools
 %prep
 pwd
 ls
-%setup -n %{name}-%{version}
+%setup -n kyotocabinet-%{version}
 pwd
 ls
 ls ..
