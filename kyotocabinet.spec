@@ -7,6 +7,7 @@ Group: Libraries/Databases
 URL: http://fallabs.com/kyotocabinet
 
 Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-%{version}.tar.gz
+Patch0:     rm_native_optimization.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: gcc-c++
@@ -39,13 +40,8 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 %prep
-pwd
-ls
 %setup -n kyotocabinet-%{version}
-pwd
-ls
-ls ..
-patch < ../rm_native_optimization.patch
+%patch0 -p1
 
 %build
 %{__make} clean || true
