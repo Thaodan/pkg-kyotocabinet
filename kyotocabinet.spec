@@ -6,7 +6,7 @@ License: LGPL and BSD 2-clause license
 Group: Libraries/Databases
 URL: http://fallabs.com/kyotocabinet
 
-Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.76.tar.gz
+Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 BuildRequires: gcc-c++
@@ -39,7 +39,12 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 %prep
-%setup -q -n %{name}-%{version}
+pwd
+ls
+%setup -n %{name}-%{version}
+pwd
+ls
+ls ..
 patch < ../rm_native_optimization.patch
 
 %build
