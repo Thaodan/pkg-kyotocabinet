@@ -10,7 +10,8 @@ Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-%{version}.tar.gz
 Patch0:     rm_native_optimization.patch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
-BuildRequires: gcc-c++ zlib
+Requires: zlib
+BuildRequires: gcc-c++ zlib-devel
 
 %description
 Kyoto Cabinet is a library of routines for managing a
