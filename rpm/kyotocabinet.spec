@@ -39,7 +39,8 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 %prep
-%setup
+%setup -q -n %{name}-%{version}
+patch < ../rm_native_optimization.patch
 
 %build
 %{__make} clean || true
@@ -59,7 +60,9 @@ CXXFLAGS="$CXXFLAGS -fPIC"
 
 %pre
 
-%post
+%post -n libkyotocabinet -p /sbin/ldconfig
+
+%postun -n libkyotocabinet -p /sbin/ldconfig
 
 %files
 %files
