@@ -3,7 +3,7 @@ Name: libkyotocabinet
 Version: 1.2.76
 Release: 1%{?dist}
 License: LGPL and BSD 2-clause license
-Group: Libraries/Databases
+Group: Development/Libraries
 URL: http://fallabs.com/kyotocabinet
 
 Source: http://fallabs.com/kyotocabinet/pkg/kyotocabinet-%{version}.tar.gz
