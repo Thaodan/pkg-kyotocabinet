@@ -1,6 +1,6 @@
 Summary: Kyoto Cabinet is a library of routines for managing a database
 Name: libkyotocabinet
-Version: 1.2.76
+Version: 1.2.77
 Release: 1%{?dist}
 License: LGPL and BSD 2-clause license
 Group: Development/Libraries
