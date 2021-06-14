@@ -41,7 +41,8 @@ Kyoto Cabinet is a library of routines for managing a
 database. Test tools
 
 %prep
-%setup -q -n kyotocabinet-%{version}
+%setup -q
+#-n kyotocabinet-%{version}
 %patch0 -p1
 
 %build
